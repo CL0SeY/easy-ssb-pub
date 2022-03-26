@@ -2,7 +2,8 @@ FROM buildpack-deps:xenial
 
 RUN groupadd -r node && useradd -r -g node node
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" >> /etc/apt/sources.list
+RUN echo "deb [arch=arm64,armhf,ppc64el,s390x] http://ports.ubuntu.com/ubuntu-ports/ xenial main universe" >> /etc/apt/sources.list
+RUN echo "deb [arch=amd64,i386] http://archive.ubuntu.com/ubuntu xenial main universe" >> /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get upgrade -y
 
