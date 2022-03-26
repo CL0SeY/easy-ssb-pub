@@ -4,7 +4,6 @@ services:
     build: .
     environment:
       HOST: "${HOST}"
-      HOME: "${HOME}"
       DEBUG: "${DEBUG}"
     ports:
       - "80:80"
