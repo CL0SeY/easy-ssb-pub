@@ -1,8 +1,8 @@
-FROM buildpack-deps:xenial
+FROM buildpack-deps:bionic
 
 RUN groupadd -r node && useradd -r -g node node
 
-RUN echo "deb http://archive.ubuntu.com/ubuntu xenial main universe" >> /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu bionic main universe" >> /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get upgrade -y
 
